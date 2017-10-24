@@ -4,12 +4,6 @@ import sys
 import numpy as np
 from datetime import datetime as dt
 
-# n = int(input().strip())
-# scores = [int(scores_temp) for scores_temp in input().strip().split(' ')]
-# m = int(input().strip())
-# alice = [int(alice_temp) for alice_temp in input().strip().split(' ')]
-# your code goes here
-
 # TEST CASE 1
 n = 7
 scores = [100, 100, 50, 40, 40, 20, 10]
@@ -28,6 +22,12 @@ alice = np.array(lines[3].split(' '),dtype='int')
 # ------------------------------
 # ------------------------------ 
 
+# n = int(input().strip())
+# scores = [int(scores_temp) for scores_temp in input().strip().split(' ')]
+# m = int(input().strip())
+# alice = [int(alice_temp) for alice_temp in input().strip().split(' ')]
+# your code goes here
+
 rank_list = [1]  # initialise rank list
 
 for j in range(1,n):
@@ -40,7 +40,6 @@ max_score = max(scores)
 
 scores = list(scores)
 rank_list = list(rank_list)
-
 
 alice_rank = []
 
@@ -60,6 +59,8 @@ for i,alice_score in enumerate(alice):
         alice_rank.append('1')
 
 save_results = '\n'.join(alice_rank)
+
+print(save_results)
 
 # ------------------------------
 # ------------------------------
