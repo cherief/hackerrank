@@ -51,11 +51,7 @@ j = len(scores)-1
 for i,alice_score in enumerate(alice):
 
     if alice_score < max_score:
-
-        
-
         while alice_score >= scores[j]:
-
             j = j - 1
 
         alice_rank.append(str(rank_list[j]+1))
@@ -63,16 +59,13 @@ for i,alice_score in enumerate(alice):
     else:
         alice_rank.append('1')
 
-
 save_results = '\n'.join(alice_rank)
-print(save_results)
+
 # ------------------------------
 # ------------------------------
 # ------------------------------
 
 print(dt.now() - start)
-
-
 
 f = open('results.txt','w+')
 f.write(save_results)
